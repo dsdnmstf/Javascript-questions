@@ -41,22 +41,64 @@
 // let output = mail.slice(mail.indexOf('c'), mail.indexOf(','));
 // console.log(output);
 
+function GCD(n1, n2) {
+  let number;
+  let gcd = 1;
+  if (n1 < n2) {
+    number = n1;
+  } else {
+    number = n2;
+  }
 
-// function GCD(n1, n2) {
-//   var number;
-//   var gcd = 1;
+  for (i = 1; i <= number; i++) {
+    if (n1 % i == 0 && n2 % i == 0) {
+      gcd = i;
+    }
+  }
+  console.log(`Greatest common divisor of ${n1} and ${n2} is ${gcd}.`);
+}
+GCD(16, 48);
 
-//   if (n1 < n2) {
-//     number = n1;
-//   } else {
-//     number = n2;
-//   }
+let foo = 1;
+function sayHello() {
+  var foo = "Hello";
+  console.log(foo);
+}
+console.log(sayHello());
+console.log(foo);
 
-//   for (i = 1; i <= number; i++) {
-//     if (n1 % i == 0 && n2 % i == 0) {
-//       gcd = i;
-//     }
-//   }
-//   console.log(`Greatest common divisor of ${n1} and ${n2} is ${gcd}.`);
-// }
-// GCD(16, 48);
+let liste = [1, 2, 3, 4, 5, "bir", "iki", "üc", "dört", "bes"];
+console.log(typeof liste);
+console.log(liste);
+
+for (i = 0; i < liste.length; i++) {
+  console.log("Hello");
+}
+
+for (i in liste) {
+  console.log(liste[i]);
+}
+
+
+// *************FOURTHQUESTION******************
+
+// Write a Python/JavaScript code that counts how many vowels and constants a string has that a user entered.
+
+const countLetter = () => {
+  let string = prompt("Please enter your expressinon").toLowerCase();
+  let countVovel = 0;
+  let countConstant = 0;
+  const vovel = "aeioöuü";
+  const constant = "bcdfghlklmnpqrstvwxyz";
+  for (letter of string) {
+    if (vovel.includes(letter)) {
+      countVovel++;
+    } else if (constant.includes(letter)) {
+      countConstant++;
+    }
+  }
+  console.log(`The number of vovel ist : ${countVovel}`);
+  console.log(`The number of constant ist : ${countConstant}`);
+};
+
+countLetter();
