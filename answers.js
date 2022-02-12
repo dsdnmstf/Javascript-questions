@@ -79,26 +79,41 @@ for (i in liste) {
   console.log(liste[i]);
 }
 
-
 // *************FOURTHQUESTION******************
 
-// Write a Python/JavaScript code that counts how many vowels and constants a string has that a user entered.
+// ?Write a Python/JavaScript code that counts how many vowels and constants a string has that a user entered.
 
-const countLetter = () => {
-  let string = prompt("Please enter your expressinon").toLowerCase();
-  let countVovel = 0;
-  let countConstant = 0;
-  const vovel = "aeioöuü";
-  const constant = "bcdfghlklmnpqrstvwxyz";
-  for (letter of string) {
-    if (vovel.includes(letter)) {
-      countVovel++;
-    } else if (constant.includes(letter)) {
-      countConstant++;
+// const countLetter = () => {
+//   let string = prompt("Please enter your expressinon").toLowerCase();
+//   let countVovel = 0;
+//   let countConstant = 0;
+//   const vovel = "aeioöuü";
+//   const constant = "bcdfghlklmnpqrstvwxyz";
+//   for (letter of string) {
+//     if (vovel.includes(letter)) {
+//       countVovel++;
+//     } else if (constant.includes(letter)) {
+//       countConstant++;
+//     }
+//   }
+//   console.log(`The number of vovel ist : ${countVovel}`);
+//   console.log(`The number of constant ist : ${countConstant}`);
+// };
+
+// countLetter();
+
+// ?Write a Python/JS code to sort the list/array below without using .sort() method of list/array.
+
+let aray = [999, 333, 2, 8982, 12, 45, 77, 99, 11];
+let new_aray = [];
+while (aray.length > 0) {
+  let min = aray[0];
+  for (i of aray) {
+    if (i < min) {
+      min = i;
     }
   }
-  console.log(`The number of vovel ist : ${countVovel}`);
-  console.log(`The number of constant ist : ${countConstant}`);
-};
-
-countLetter();
+  new_aray.push(min);
+  aray.splice(aray.indexOf(min), 1);
+}
+console.log(new_aray);
